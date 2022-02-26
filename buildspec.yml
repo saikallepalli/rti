@@ -14,7 +14,7 @@ phases:
     commnads:
       - echo Build started om 'date'
       - echo first test codes
-      - CI=true npn test
+      - CI=true npm test
       - echo Compiling the codes
       - npm run build
       - echo Build finished
