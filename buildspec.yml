@@ -12,7 +12,7 @@ phases:
       - aws --version
   build:
     commnads:
-      - echo Build started om 'date'
+      - echo Build started on 'date'
       - echo first test codes
       - CI=true npm test
       - echo Compiling the codes
