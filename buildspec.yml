@@ -1,12 +1,23 @@
 version: 0.2
-
 phases:
   install:
+    runtime-versions:
+      nodejs: 10
     commands:
+      - echo Getting Started
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies..
       - npm install
+      - aws --version
   build:
-    commands:
+    commnads:
+      - echo Build started om 'date'
+      - echo first test codes
+      - CI=true npn test
+      - echo Compiling the codes
       - npm run build
-artifacts:
-  files:
-    - '**/*'
+      - echo Build finished
+   post_build:
+     commands:
+       - echo Build completed on 'date'
